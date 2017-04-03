@@ -51,7 +51,6 @@
 						</c:if>
 					</p>
 					<a href="javascript:;" name="person">修改个人资料</a>
-					<a href="javascript:;" name="history">查看历史报修记录</a>
 				</div>
 				<ul>
 					<li><a href="javascript:;" name="addFix"><span class="leftF">&gt;</span>添加维修项目<span class="rightF">&lt;</span></a></li>
@@ -62,14 +61,14 @@
 			<div id="midRightContent">
 				<div id="addDiv">
 					<h2>添加维修项目</h2>
-					<form action="/MainPlatform/addServlet" method="post">
+					<form action="" method="post">
 						<ul>
-							<li><font>用户：</font><input type="text" name="tName" value="${teacher.tName }" /></li>
-							<li><font>设备名：</font><input type="text" name="eqName" placeholder="填写设备名" /></li>
-							<li><font>地点：</font><input type="text" name="eqSpace" placeholder="填写地点" /></li>
+							<li><font>报修人：</font><input type="text" name="tName" value="${teacher.tName }" readonly="readonly" /></li>
+							<li><font>报修设备名：</font><input type="text" name="eqName" placeholder="填写设备名" /></li>
+							<li><font>维修地点：</font><input type="text" name="eqSpace" placeholder="填写地点" /></li>
 							<li><font>报修时间：</font><input type="text" name="fixTime" placeholder="点击获取当前时间" /></li>
 							<li>
-								<font class="wxmsg">详细信息：</font>
+								<font class="wxmsg">报修信息：</font>
 								<textarea rows="8" cols="40" name="fixMessage" placeholder="填写相关信息,字数不超过两百"></textarea>
 							</li>
 							<li><input type="submit" value="提交" id="addSubmit" /></li>

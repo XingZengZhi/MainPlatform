@@ -50,7 +50,7 @@ $(function(){
 			$.ajax({
 				type:"post",
 				url:"/MainPlatform/addServlet",
-				data:"tName="+$("input[name='tName']").val()+
+				data:"tName="+$("#addDiv input[name='tName']").val()+
 						"&eqName="+$("input[name='eqName']").val()+
 							"&fixTime="+$("input[name='fixTime']").val()+
 								"&fixMessage="+$("textarea[name='fixMessage']").val()+

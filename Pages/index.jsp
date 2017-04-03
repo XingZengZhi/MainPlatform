@@ -40,7 +40,7 @@
 					<li><a name="ind" style="background:rgba(102,102,102,0.7);" href="${pageContext.request.contextPath }/FixPages/indexFix.jsp" target="fixiframe">首页</a></li>
 					<li><a href="/MainPlatform/showAllServlet" target="fixiframe">待受理设备</a></li>
 					<li><a href="/MainPlatform/slSuccessServlet" target="fixiframe">以受理设备</a></li>
-					<li><a href="${pageContext.request.contextPath }/FixPages/deleteFix.jsp" target="fixiframe">删除维修设备</a></li>
+					<%-- <li><a href="${pageContext.request.contextPath }/FixPages/deleteFix.jsp" target="fixiframe">删除维修设备</a></li> --%>
 					<li><a href="${pageContext.request.contextPath }/FixPages/selectFix.jsp" target="fixiframe">查询已修设备</a></li>
 				</ul>
 			</div>
