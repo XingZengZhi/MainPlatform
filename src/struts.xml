@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.i18n.ecoding" value="UTF-8" />
+	<constant name="struts.action.extension" value="action,," />
+	<!-- 配置上传文件的默认保存路径 -->
+	<constant name="struts.multipart.saveDir" value="/upload" />
+	<!-- 配置上传文件的默认最大值 100M -->
+	<constant name="struts.multipart.maxSize" value="209715200" />
+	<package name="workroom" extends="struts-default" namespace="/">
+
+		<!-- 全局跳转 -->
+		<global-results>
+			<result name="index" type="redirect">/mainflat.jsp</result>
+		</global-results>
+
+		<!-- 维修员模块 -->
+		<action name="fix_*" method="{1}" class="fixAction">
+			<result name="bgLogin" type="redirect">/bgLogin.jsp</result>
+			<result name="bgIndex">/WEB-INF/page/bgIndex.jsp</result>
+		</action>
+		
+		<action name="user_*" method="{1}" class="userAction">
+		</action>
+		
+		<action name="eq_*" method="{1}" class="eqAction">
+		</action>
+		
+		<action name="class_*" method="{1}" class="classAction">
+		</action>
+
+		<!-- 文件上传模块 -->
+		<action name="fileUpload" method="fileUpload" class="uploadAction">
+			<interceptor-ref name="fileUpload">
+				<!-- 允许上传的图片类型 -->
+				<param name="allowedTypes">
+					image/jpeg,image/gif,image/bmp,image/png,image/jpg
+				</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<param name="savePath">upload</param>
+		</action>
+		<!-- 文件下载 -->
+		<action name="download" class="downloadAction">
+			<!-- 设置文件下载路径参数 -->
+			<!-- <param name="inputPath">/upload/1.jpg</param> -->
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream;charset=ISO8859-1</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+				<param name="bufferSize">8192</param>
+			</result>
+		</action>
+	</package>
+</struts>

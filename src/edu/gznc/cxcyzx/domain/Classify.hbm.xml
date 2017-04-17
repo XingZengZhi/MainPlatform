@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="edu.gznc.cxcyzx.domain.Classify" table="class_tb">
+        <id name="class_id" type="long">
+            <column name="class_id" />
+            <generator class="native" />
+        </id>
+        <property name="class_name" type="java.lang.String">
+            <column name="class_name" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="edu.gznc.cxcyzx.domain.User" table="user_tb">
+        <id name="uid" type="long">
+            <column name="uid" />
+            <generator class="native" />
+        </id>
+        <property name="uname" type="java.lang.String">
+            <column name="uname" />
+        </property>
+        <property name="upassword" type="java.lang.String">
+            <column name="upassword" />
+        </property>
+        <property name="utelphone" type="java.lang.String">
+            <column name="utelphone" />
+        </property>
+        <property name="uimgpath" type="java.lang.String">
+            <column name="uimgpath" />
+        </property>
+        <set name="eqs" table="eq_tb" inverse="false" lazy="true">
+            <key>
+                <column name="eq_user" />
+            </key>
+            <one-to-many class="edu.gznc.cxcyzx.domain.equipment" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,537 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+input{
+	outline:none;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+#content {
+	position: relative;
+	/*border:1px solid red;*/
+}
+
+#top {
+	width: 100%;
+	height: 250px;
+}
+
+
+/*顶部logo*/
+
+#logo {
+	height: 200px;
+	width: 80%;
+	margin: 0 auto;
+	background: url(../imgs/top.png) no-repeat;
+	background-size: contain;
+}
+
+#link {
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	border-top: 2px solid rgb(0, 153, 255);
+}
+
+#link span {
+	display: inline-block;
+	width: 120px;
+	height: 46px;
+	line-height: 47px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+#link a{
+	text-align:left;
+	display:inline-block;
+	width: 60px;
+	height: 46px;
+	line-height: 47px;
+	font-size:12px;
+	color:#3AC0F2;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	text-decoration: underline;
+}
+
+#username{
+	font-size:12px;
+}
+
+#link span:hover {
+	cursor: pointer;
+}
+
+.active {
+	color: rgb(252, 0, 161);
+	border-bottom: 2px solid rgb(252, 0, 161);
+}
+
+#mid {
+	position: relative;
+	width: 100%;
+	min-height: 400px;
+}
+
+#re,#se,#la{
+	position: absolute;
+	width:100%;
+	height: 100%;
+	text-align: center;
+}
+
+#re{
+	background-color: #3AC0F2;
+}
+
+#se{
+	display: none;
+	background-image: url(../imgs/56.jpg);
+	background-repeat: no-repeat;
+	background-size: 1270px 600px;
+}
+
+#la{
+	display: none;
+	background-image: url(../imgs/67.jpg);
+	background-repeat: no-repeat;
+	background-size: 1270px 600px;
+}
+
+#re a {
+	display: inline-block;
+	width: 180px;
+	height: 180px;
+	margin: 110px 40px;
+	background-color: white;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-o-border-radius: 100%;
+	box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	-moz-box-shadow: 0 0 5px #ccc;
+	color:black;
+}
+
+#re a:hover{
+	cursor: pointer;
+	color:#FC00A1;
+}
+
+#re a img{
+	display: block;
+	width:110px;
+	height:90px;
+	margin:20px auto;
+}
+
+#re a span{
+	display: block;
+	margin-top:-10px;
+}
+
+#foot {
+	width: 100%;
+	height: 300px;
+	position: relative;
+	background-color: rgb(54, 54, 54);
+}
+
+#foot p {
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	margin-top: 100px;
+	text-align: center;
+	color: rgb(204, 204, 204);
+}
+
+/*维修列表*/
+#Fix_1,#Fix_2,#Fix_3,#Fix_4{
+	display:block;
+	width:100%;
+	height:500px;
+	position: relative;
+}
+
+#Fix_1 h2,#Fix_2 h2,#Fix_3 h2,#Fix_4 h2{
+	margin-top:20px;
+	display: block;
+	width:100%;
+	letter-spacing: 3px;
+	font-size: 25px;
+	font-weight: 500;
+	text-align: center;
+}
+
+#Fix_1 i,#Fix_2 i,#Fix_3 i,#Fix_4 i{
+	display: block;
+	width:10%;
+	height:5px;
+	margin:10px auto;
+	background-color:#3AC0F2;
+}
+
+#Fix_1 #Table_Fix_1,#Fix_2 #Table_Fix_2,#Fix_3 #Table_Fix_3,#Fix_4 #Table_Fix_4{
+	width:80%;
+	height:400px;
+	margin:0 auto;
+	position: relative;
+}
+
+.icon_left{
+	display:none;
+	position: absolute;
+	top:170px;
+	left:0;
+}
+
+.icon_right{
+	display:none;
+	position: absolute;
+	top:170px;
+	right:0;
+}
+
+.icon_left:hover, .icon_right:hover{
+	cursor:pointer;
+}
+
+.icon_left img,.icon_right img{
+	display: block;
+	width:60px;
+	height:40px;
+}
+
+#pageNum{
+	display: block;
+	width:100%;
+	height:35px;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+#pageNum span{
+	display:inline-block;
+	height: 35px;
+	width:50px;
+	line-height: 35px;
+	text-align: center;
+}
+
+.SetColor{
+	color:#ccc;
+}
+
+.SetSize{
+	font-size: 25px;
+}
+
+#Table_data{
+	width:100%;
+	height:350px;
+}
+
+#data-1,#data-2,#data-3,#data-4{
+	display: block;
+	width:800px;
+	height:100%;
+	margin:0 auto;
+}
+
+#data-1 p,#data-2 p,#data-3 p,#data-4 p{
+	height: 35px;
+	text-align: center;
+}
+
+#data-1 p:nth-child(1),#data-2 p:nth-child(1),#data-3 p:nth-child(1),#data-4 p:nth-child(1){
+	background-color:#F5F5F5;
+}
+
+#data-1 p span,#data-2 p span,#data-3 p span,#data-4 p span{
+	display: inline-block;
+	width:130px;
+	height:35px;
+	line-height: 35px;
+}
+
+#mb{
+	display: none;
+	width:100%;
+	height: 100%;
+	position:fixed;
+	z-index: 100;
+	background-color:rgba(0,0,0,0.6);
+}
+
+#mb h3{
+	text-align: center;
+	margin-top:100px;
+	color:white;
+}
+
+#mb img{
+	display: block;
+	width: 50px;
+	height:50px;
+	position: absolute;
+	left:900px;
+	top:130px;
+}
+
+#mb img:hover{
+	cursor: pointer;
+}
+
+#mb form{
+	padding-top:10px;
+	margin:50px auto;
+	background-color:white;
+	display: block;
+	height:300px;
+	width:500px;
+	border-radius: 5px;
+	position: relative;
+}
+#mb form p{
+	margin-left:120px;
+	margin-top:20px;
+	text-align: left;
+}
+
+#mb form p span{
+	font-size:14px;
+}
+
+#mb form p input{
+	border-radius: 5px;
+	border:none;
+	border:1px solid #ccc;
+	margin-left:10px;
+	width:150px;
+	height:25px;
+	padding-left:10px;
+}
+
+#mb form p input:hover{
+	border:1px solid red;
+}
+
+#mb form textarea{
+	border-radius: 5px;
+	border:none;
+	border:1px solid #ccc;
+	position: absolute;
+	left:170px;
+	top:125px;
+	resize: none;
+}
+
+#mb form input[type='submit']{
+	outline: none;
+	border:none;
+	background-color:#FF4646;
+	display: block;
+	position: absolute;
+	width:100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color:white;
+	bottom:20px;
+	left:170px;
+}
+
+#eq_tip{
+	position:absolute;
+	bottom:70px;
+	left:50px;
+	color:red;
+}
+
+#se span{
+	display: block;
+	color:white;
+	font-size:50px;
+	width:100%;
+	height:400px;
+	line-height: 400px;
+	text-align: center;
+}
+
+#la img{
+	position: absolute;
+	width:70px;
+	height:70px;
+	border-radius: 100%;
+	top:20px;
+	right:220px;
+	z-index: 10;
+	border:1px solid black;
+}
+
+#la form{
+	display: block;
+	position: absolute;
+	top:80px;
+	right:100px;
+	width:300px;
+	height:300px;
+	margin:0 auto;
+	border:1px solid black;
+	border-radius: 5px;
+	background-color:rgba(0,0,0,0.5);
+}
+
+#la form#forPass{
+	display: none;
+	height:300px;
+	right:500px;
+}
+
+#la form#registForm{
+	display: none;
+}
+
+#la form p{
+	display: block;
+	height:20px;
+	line-height: 20px;
+	margin-top:20px;
+	margin-left:50px;
+	text-align: left;
+	color:#ccc;
+	font-size:11px;
+}
+
+#la input{
+	border-radius: 5px;
+	border:none;
+	display: block;
+	width:200px;
+	height:30px;
+}
+
+#la input[type='text'],#la input[type='password']{
+	margin:10px auto;
+	padding-left:5px;
+}
+
+#la input[type='submit']{
+	background-color:#FF4646;
+	color:white;
+	margin-top:20px;
+	margin-left:48px;
+	width:100px;
+}
+
+#la #forgetPass{
+	position:absolute;
+	left:50px;
+	top:220px;
+	font-size:13px;
+	color:yellow;
+	text-decoration: underline;
+}
+
+#la #forgetPass:hover{
+	cursor: pointer;
+}
+
+#la #reg,#la #loginSpan{
+	position: absolute;
+	left:225px;
+	top:220px;
+	font-size:13px;
+	color:red;
+}
+
+#la #loginSpan{
+	top:230px;
+}
+
+#la #reg:hover, #la #loginSpan:hover{
+	cursor: pointer;
+}
+
+#se #se_data{
+	display: none;
+	margin:0 auto;
+	width:1000px;
+	height:400px;
+	border-radius: 10px;
+	position: relative;
+	background-color:rgba(0,0,0,0.5);
+}
+
+#se #se_data p{
+	height: 35px;
+	text-align: center;
+	border-bottom: 1px solid white;
+}
+
+#se #se_data p span{
+	display: inline-block;
+	width:130px;
+	height:35px;
+	font-size:14px;
+	line-height: 35px;
+}
+
+#se_page{
+	position: absolute;
+	display: block;
+	width:100%;
+	height:35px;
+	bottom: 0;
+}
+
+#se_page #se_page_left,#se_page #se_page_right{
+	position: absolute;
+	display: block;
+	width:70px;
+	height:30px;
+}
+
+#se_page #se_page_left img, #se_page #se_page_right img{
+	width:100%;
+	height:100%;
+	display: block;
+}
+
+#se_page #se_page_left{
+	display:none;
+	left:0;
+}
+
+#se_page #se_page_left:hover, #se_page #se_page_right:hover{
+	cursor: pointer;
+}
+
+#se_page #se_page_right{
+	display:none;
+	right:0;
+}

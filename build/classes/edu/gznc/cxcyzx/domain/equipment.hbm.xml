@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="edu.gznc.cxcyzx.domain.equipment" table="eq_tb">
+        <id name="eq_id" type="long">
+            <column name="eq_id" />
+            <generator class="native" />
+        </id>
+        <property name="eq_name" type="java.lang.String">
+            <column name="eq_name" />
+        </property>
+        <property name="eq_fixtime" type="java.lang.String">
+            <column name="eq_fixtime" />
+        </property>
+        <property name="eq_message" type="java.lang.String">
+            <column name="eq_message" />
+        </property>
+        <property name="eq_space" type="java.lang.String">
+            <column name="eq_space" />
+        </property>
+         <property name="eq_sta" type="integer">
+            <column name="eq_sta" />
+        </property>
+        <many-to-one name="user" class="edu.gznc.cxcyzx.domain.User" fetch="join">
+            <column name="eq_user" />
+        </many-to-one>
+        <many-to-one name="fixer" class="edu.gznc.cxcyzx.domain.Fix" fetch="join">
+            <column name="eq_fix" />
+        </many-to-one>
+        <many-to-one name="classify" class="edu.gznc.cxcyzx.domain.Classify">
+        	<column name="eq_class" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
